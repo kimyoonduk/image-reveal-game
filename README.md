@@ -12,20 +12,20 @@ Our first task for the crowdworkers is annotating images. To do this, a crowdwor
 
 	Raw Data (1 point)
 
-### Aggregation (1 point)
+	Aggregation (1 point)
 
-### Quality Control (2 points)
+	Quality Control (2 points)
 
 
 ## Task 2: Guessing (5 total points)
 
-### AMT HIT (2 points)
+	AMT HIT (2 points)
 
-### Raw Data (1 point)
+	Raw Data (1 point)
 
-### Aggregation (1 point)
+	Aggregation (1 point)
 
-### Quality Control (1 point)
+	Quality Control (1 point)
 
 
 ## Analysis and Writeup (4 total points)
