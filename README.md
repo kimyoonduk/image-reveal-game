@@ -35,4 +35,4 @@ To characterize the data collected, we will create a heatmap for the click seque
 
 
 Analysis of Results (2 points)
-Analysis of our results will involve answering the big-picture questions and goals that we set for this project. Is the most common sequence the best performing sequence? How do the guesses evolve over time? Do different incentives change the outcome, such as offering a bonus for fewer guesses? Analysis of the click sequences heatmap, coordinate and answer rate data should give us the insights to answer these questions and better understand the process of image recognition.
+Analysis of our results will involve answering the big-picture questions and goals that we set for this project. We want to answer questions such as: is the most common sequence the best performing sequence? How do the guesses evolve over time? Do different incentives change the outcome, such as offering a bonus for fewer guesses? Analysis of the click sequences heatmap, coordinate and answer-rate data should give us the insights to answer these questions and to better understand the process of image recognition.
