@@ -31,7 +31,8 @@ Here we can simply check if they are making reasonable guesses and not just tryi
 ## Analysis and Writeup (4 total points)
 
 Data Description (2 points)
-To characterize the data collected, we will create a heatmap for the click sequences that show which pixels are most commonly included for the given label to be guessed. We plan to also create visualizations for the selected coordinates and their corresponding answer rates. We want to answer questions such as: at the reveal of which pixel coordinate have the majority of users guessed the label? And on average, how many pixels are revealed before a user guesses the label? We also want to find characteristics of 'good' annotators and guessers, based on the time it took for themselves or their corresponding guesser to guess the label correctly.
+To characterize the data collected, we will create a heatmap for the click sequences that show which pixels are most commonly included for the given label to be guessed. We plan to also create visualizations for the selected coordinates and their corresponding answer rates. We also want to find characteristics of 'good' annotators and guessers, based on the time it took for themselves or their corresponding guesser to guess the label correctly.
 
 
 Analysis of Results (2 points)
+Analysis of our results will involve answering the big-picture questions and goals that we set for this project. Is the most common sequence the best performing sequence? How do the guesses evolve over time? Do different incentives change the outcome, such as offering a bonus for fewer guesses? Analysis of the click sequences heatmap, coordinate and answer rate data should give us the insights to answer these questions and better understand the process of image recognition.
