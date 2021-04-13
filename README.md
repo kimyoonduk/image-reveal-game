@@ -1,6 +1,8 @@
 # image-reveal-game
 For our NETS 213 Final project, we will be creating a game in which users deblur images in the least amount of clicks for other users to identify the subject of the image. This game's purpose is to provide meaningful insight to image recognition.
 
+[Link to Flow-Diagram](docs/d1/flow_diagram.png)
+
 ## Planning (1 point) 
 In planning phase of our project, we expect to lay out the guidelines for Task 1 (annotation) and Task 2 (guessing), including the instructions that the user will see. We will also be selecting and inputting a relevant image dataset, setting goals for the size and attributes of our HIT's outputs, and establishing a budget and timeline for our milestones. 
 
@@ -16,6 +18,10 @@ This will involve grabbing the data that we receive from the HIT and processing 
 Quality Control (2 points)
 We will have to have a system of checking if the users are actually completing the task and not just selecting random squares quickly and submitting.
 
+Mockup
+
+![Mockup for Task 1](docs/d1/mockup_t1_annotation.png)
+
 ## Task 2: Guessing (5 total points)
 For this task, users will be given the blurred image and will have to guess what the keyword for the image was. Incrementally, we will deblur the image according to a HIT in Task 1, so that the user in Task 2 will be "responding" to the the user in Task 1's strategic deblurring. They will have a chance to guess the keyword with each square that is deblurred.
 
@@ -27,6 +33,10 @@ This will involve again pulling the data from the HIT and making it usable for t
 
 Quality Control (1 point)
 Here we can simply check if they are making reasonable guesses and not just trying to submit the task with no intelligible inputs.
+
+Mockup
+
+![Mockup for Task 2](docs/d1/mockup_t2_guessing.png)
 
 ## Analysis and Writeup (4 total points)
 
