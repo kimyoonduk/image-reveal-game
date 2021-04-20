@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # annotation file not included due to size
-FOLDER_PATH = "./"
+FOLDER_PATH = "./data/input/"
 val_json = FOLDER_PATH + "instances_val2017.json"
 
 
@@ -35,11 +35,25 @@ def main():
     # 'cat' has a category id of 17
     category_id = 17
 
-    select_img = get_annotations(data, 22892)
+    select_img = get_image(data, 22892)
 
     select_anno = [anno for anno in data["annotations"] if anno["image_id"] == 22892]
 
-    # use this info for automatic filtering
+    # possible to automatically check if the worker clicked inside the polygon defined by the coordinates
     # each alternating value in the list corresponds to x and y coordinates respectively
     coordinates = get_coordinates(select_anno, category_id)
 
+    t1_path = "../data/t1_annotate/output/sample_output_t1.csv"
+
+    # raw sample for task 1
+    # rows 1-3 contain correct annotations
+    # row 4 is incorrect (dog)
+    # row 5 is incorrect (random)
+    t1_df = pd.read_csv(t1_path)
+
+    t2_path = "../data/t2_guess/output/sample_output_t2.csv"
+
+    # raw sample for task 2
+    # row 4 is incorrect (random)
+    # row 5 is incorrect (wrong input - annotation for dog)
+    t2_df = pd.read_csv(t2_path)
