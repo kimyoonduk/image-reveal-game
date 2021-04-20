@@ -1,9 +1,9 @@
 import pandas as pd
 import json
 
-# annotation file not included due to size
-FOLDER_PATH = "./data/input/"
-val_json = FOLDER_PATH + "instances_val2017.json"
+# path to annotation metadata file
+FOLDER_PATH = "../data/metadata/"
+val_json = FOLDER_PATH + "meta.json"
 
 
 def get_image(data, img_id):
