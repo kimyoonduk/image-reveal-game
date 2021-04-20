@@ -1,0 +1,4 @@
+duration,HITId,AssignmentId,WorkerId,AssignmentStatus,AutoApprovalTime,Approve,img_id,category_id,category_name,point_1,point_2,point_3,point_4,point_5,point_6,point_7,point_8,point_9,point_10,avg_point
+0:03:30,test,assignment1,worker1,Submitted,2020-10-16 22:19:10+09:00,,22892,17,cat,"295,100","337,120","286,158","272,80","375,64","421,150",,,,,234062.0
+0:04:54,test,assignment2,worker2,Submitted,2020-10-16 23:06:31+09:00,,22892,17,cat,"303,120","239,100","380,90","390,96","457,128","251,101","397,213","472,102","367,170","445,150",300927.0
+0:05:13,test,assignment3,worker3,Submitted,2020-10-16 23:17:39+09:00,,22892,17,cat,"313,81","384,67","316,75","339,80","375,50","462,123","456,258",,,,155919.14285714287
