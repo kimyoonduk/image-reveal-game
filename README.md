@@ -71,7 +71,7 @@ Task 1 Quality Control and Aggregation looks through each of the users' clicks w
 
 ### Step-by-Step Instructions
 1. The following link provides access to our Task 1 (Annotation) and Task 2 (Guessing): https://image-reveal-game.netlify.app/
-2. If you face any complications when completing our tasks or if you have any questions, you can contact us at jhoop@seas.upenn.edu
+2. If you encounter any problems when completing our tasks or if you have any questions, you can contact us at jhoop@seas.upenn.edu
 #### Instructions for Annotation Task
 3. After navigating to the above link, open the "Go to task 1 - Annotation" link. You should see an **Image Revealing Task** Screen that includes basic instructions for completing the task, along with a bolded image label and two versions of an image (one blurred).
 4. To complete this task, imagine that you are playing a game with a friend with the goal being to help your friend identify the given label in the image in as few guesses as possible. Your friend will have access to the blurred image and any pixels you reveal in it, but will not have access to the label. Using the clear image as a reference, you should click on the pixelated boxes in the blurred image that you think best reveal the label. But choose your clicks wisely, as you will only be able to make up to 10 clicks. After each of your clicks, your friend will be able to see what was revealed in the blurred image and guess what the label is. If at any point you feel your clicks accurately reveal the label, you may press the **Done** button to complete the task.
