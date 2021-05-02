@@ -3,7 +3,7 @@ For our NETS 213 Final project, we will be creating a game in which users deblur
 
 [Link to Flow-Diagram](https://raw.githubusercontent.com/kimyoonduk/image-reveal-game/main/docs/d1/flow_diagram.png)
 
-## Deliverable 1 - Major Components and Points Distribution
+## Milestone 2 Deliverable 1 - Major Components and Points Distribution
 
 ### Planning (1 point) 
 In planning phase of our project, we expect to lay out the guidelines for Task 1 (annotation) and Task 2 (guessing), including the instructions that the user will see. We will also be selecting and inputting a relevant image dataset, setting goals for the size and attributes of our HIT's outputs, and establishing a budget and timeline for our milestones. 
@@ -49,7 +49,7 @@ To characterize the data collected, we will create a heatmap for the click seque
 Analysis of Results (2 points)
 Analysis of our results will involve answering the big-picture questions and goals that we set for this project. We want to answer questions such as: is the most common sequence the best performing sequence? How do the guesses evolve over time? Do different incentives change the outcome, such as offering a bonus for fewer guesses? Analysis of the click sequences heatmap, coordinate and answer-rate data should give us insights to answer these questions and to better understand the process of image recognition.
 
-## Deliverable 2: Data, Processing, and File Directory
+## Milestone 2 Deliverable 2: Data, Processing, and File Directory
 
 ### Data
 Our game is split into two parts, one where users will annotate and deblur images and one where users will guess the labels for the images. Towards that end, in our `/data` folder we have things separated by task, `t1_annotate` for annotation and `t2_guess` for guessing. For Task 1: Annotation, our input data for one task is an image, a blurred version of that image, and a label describing the object of the image. This is our **Raw Data**. Task 1's input (`/data/t1_annotate/input`) overall then will be the images and their blurred counterparts. 
@@ -67,3 +67,20 @@ You may have noticed that the csv outputs in the `/data/t1_annotate/output` fold
 
 Task 1 Quality Control and Aggregation looks through each of the users' clicks when annotating the image, and filters out the users whose average selected point was above the 75th or below the 25th percentile of all selected point locations for the given label. Depending on the dataset of images we pull from (the metadata folder we discussed earlier), we also most likely will be able to get already-annotated images (say, a picture of a cat with the coordinate labels associated with the cat) so that we can compare that with user clicks. We want to filter out users who make wild guesses which have nothing to do wtih the label. Task 2's Quality Control and Aggregation looks through each of the Worker's guesses and uses a majority vote to create the final gold standard guess. It then goes through and removes the HITs where the user doesn't get the majority guess. This is to remove users who may submit answers that aren't words or are generally unintelligible.
 
+## Milestone 3: Instructions for Contribution and Code Description
+
+### Step-by-Step Instructions
+1. The following link provides access to our Task 1 (Annotation) and Task 2 (Guessing): https://image-reveal-game.netlify.app/
+2. If you encounter any problems when completing our tasks or if you have any questions, you can contact us at jhoop@seas.upenn.edu
+#### Instructions for Annotation Task
+3. After navigating to the above link, open the "Go to task 1 - Annotation" link. You should see an **Image Revealing Task** Screen that includes basic instructions for completing the task, along with a bolded image label and two versions of an image (one blurred).
+4. To complete this task, imagine that you are playing a game with a friend with the goal being to help your friend identify the given label in the image in as few guesses as possible. Your friend will have access to the blurred image and any pixels you reveal in it, but will not have access to the label. Using the clear image as a reference, you should click on the pixelated boxes in the blurred image that you think best reveal the label. But choose your clicks wisely as you will only be able to make up to 10 clicks. After each of your clicks, your friend will be able to see what was revealed in the blurred image and guess what the label is. If at any point you feel your clicks accurately reveal the label you may press the **Done** button to complete the task.
+#### Instructions for Guessing Task
+5. If you have already completed the Annotation Task, you can navigate back to the home page using the **Back to Main** link at the top of the screen. 
+6. First open, "Go to task 2 - Guessing" link. You should see an **Image Guessing Task** Screen that includes basic instructions for completing the task, along with a blurred image and a guessing box. 
+7. To complete this task, imagine that you are playing a game with the goal being to identify the object in the blurred image in as few guesses as possible. More parts of the image will be revealed to you after each of your guesses. But choose your guesses wisely as you will only be able to make up to 10 guesses. To make a guess, enter your guess into the "your guess" textbox and click **Submit Guess**. Once you have used up all of your 10 guesses or you think that you have successfully guessed the object, the task is complete.
+
+### Updates on QC and Aggregation
+For Quality Control, we created a script in `src/data_processing.py` which when run computes quality control on both Task 1 and Task 2. For Task 1, it calculates the bounding box from the meta.json file from COCO, and checks to see whether the user clicks are within that bounding box. It then calculates worker quality of how many clicks were within the bounding box vs. the total number of clicks. It outputs this as a csv of (workerID, quality). For Task 2, it simply outputs workers whose guess is ultimately incorrect. We could further implement this to create a similar sort of quality check as to how many they were able to guess correctly, but for now it outputs the workerIDs of workers who got at least one guess incorrect as a csv. 
+
+For Aggregation, we have a sample notebook in `notebook/data aggregation.ipynb` where we visually plot for each image its bounding box, and all of the user inputted clicks that we collected. What's there currently is the example that is used with our sample output data. This is just one way that we could be able to aggregate the data for the Task 1: Guessing part of our project. For Task 2, there could be simpler graphs that represent the different guesses for each image.
