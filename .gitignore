@@ -1,4 +1,5 @@
 *.DS_Store
+src/manage_mturk.py
 
 # Logs
 logs
