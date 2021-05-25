@@ -6,10 +6,11 @@ For our NETS 213 Final project, we create a game in which users deblur images in
 
 [Web Application](https://image-reveal-game.netlify.app/)
 
-[Final Report](https://image-reveal-game.netlify.app/)
+[Final Report](https://github.com/kimyoonduk/image-reveal-game/blob/main/docs/final/ESP%20Image%20Reveal%20Game.pdf)
+
+[Video](https://vimeo.com/547697726)
 
 [Flow-Diagram](https://raw.githubusercontent.com/kimyoonduk/image-reveal-game/main/docs/d1/flow_diagram.png)
-
 
 ---
 
