@@ -1,7 +1,18 @@
 # image-reveal-game
-For our NETS 213 Final project, we will be creating a game in which users deblur images in the least amount of clicks for other users to identify the subject of the image. This game's purpose is to provide meaningful insight to image recognition.
+For our NETS 213 Final project, we create a game in which users deblur images in the least amount of clicks for other users to identify the subject of the image. This game's purpose is to provide meaningful insight to image recognition.
 
-[Link to Flow-Diagram](https://raw.githubusercontent.com/kimyoonduk/image-reveal-game/main/docs/d1/flow_diagram.png)
+
+## Link to Final Version
+
+[Web Application](https://image-reveal-game.netlify.app/)
+
+[Final Report](https://image-reveal-game.netlify.app/)
+
+[Flow-Diagram](https://raw.githubusercontent.com/kimyoonduk/image-reveal-game/main/docs/d1/flow_diagram.png)
+
+
+---
+
 
 ## Milestone 2 Deliverable 1 - Major Components and Points Distribution
 
